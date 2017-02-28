@@ -46,9 +46,6 @@ extern int tpd_v_magnify_y;
 #include <linux/delay.h>
 #include "tpd_custom_fts.h"
 #include "focaltech_ex_fun.h"
-#ifdef CONFIG_WAKE_GESTURES
-#include <linux/wake_gestures.h>
-#endif
 
 u8 *I2CDMABuf_va = NULL;
 dma_addr_t I2CDMABuf_pa = 0;
@@ -779,5 +776,3 @@ static void __exit tpd_driver_exit(void) {
 
 module_init(tpd_driver_init);
 module_exit(tpd_driver_exit);
-
-
